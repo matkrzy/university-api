@@ -1,0 +1,73 @@
+[
+  {
+    "id": "9c6beb83-c8f8-4dab-af15-732a4df81cfc",
+    "label": "pszenica",
+    "amount": 9,
+    "isGlobal": true
+  },
+  {
+    "id": "407d4deb-ce38-45f8-9aa5-34adfd75b36f",
+    "label": "jęczmień",
+    "amount": 11,
+    "isGlobal": true
+  },
+  {
+    "id": "d0baebfb-681d-40da-a136-f92cb94fe249",
+    "label": "slod monachijski",
+    "amount": 106,
+    "isGlobal": true
+  },
+  {
+    "id": "7b9ee948-202b-4686-bc29-3637477c929b",
+    "label": "slod jasny",
+    "amount": 0,
+    "isGlobal": true
+  },
+  {
+    "id": "f7750b1d-9778-4f7c-85c7-ddab1ce59c60",
+    "label": "slod pszeniczny",
+    "amount": 0,
+    "isGlobal": true
+  },
+  {
+    "id": "e3e48d22-7078-4e45-bb54-4ed99d18ada1",
+    "label": "slod karmelowy",
+    "amount": 0,
+    "isGlobal": true
+  },
+  {
+    "id": "3e31d154-5853-4967-ad55-694e987e6416",
+    "label": "localProductProcess1",
+    "amount": 0,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+  },
+  {
+    "id": "ed26900f-9a39-462e-b88c-4dd6f661bb60",
+    "label": "testLocalProductProcess2",
+    "amount": 0,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5568cf64818"
+  },
+  {
+    "id": "3347dc72-081d-4a18-b27c-8311085c00a5",
+    "label": "Local product",
+    "amount": 0,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5568cf64818"
+  },
+  {
+    "id": "e3e37b7c-4c61-4a8f-908f-3355dbd2dfec",
+    "label": "local product",
+    "amount": 0,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+  },
+  {
+    "id": "e3e37b7c-4c61-4a8f-908f-3355dbd2deed",
+    "label": "test form fixtures",
+    "amount": 10,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+  }
+]
