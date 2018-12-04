@@ -5,7 +5,7 @@ const { Product } = require('../../../../../models/product/product.model');
 
 const { getAllProducts } = require('../helpers/getAllProducts');
 
-const handleUpdateMarket = connection => async data => {
+const handleUpdateMarket = (connection, client) => async (data, callback) => {
   const { productId, amount } = data;
 
   const productsRepository = getMongoRepository(Product);
@@ -33,8 +33,12 @@ const handleUpdateMarket = connection => async data => {
     const products = await getAllProducts({ isGlobal: true });
 
     connection.emit(MARKET_UPDATE, { data: products });
+
+    if (callback) {
+      callback();
+    }
   } else {
-    connection.emit(MARKET_UPDATE, {
+    client.emit(MARKET_UPDATE, {
       errors: {
         message: 'Amount is too big',
       },

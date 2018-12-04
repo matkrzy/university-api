@@ -379,12 +379,7 @@
           }
         ],
         "outputs": [],
-        "draggableProps": {
-          "defaultPosition": {
-            "x": 1265,
-            "y": 67
-          }
-        },
+        "draggableProps": { "defaultPosition": { "x": 1265, "y": 67 } },
         "title": "Rynek"
       },
       {
@@ -412,12 +407,7 @@
         ],
         "process": {},
         "title": "Magazyn pszenicy",
-        "draggableProps": {
-          "defaultPosition": {
-            "x": 304,
-            "y": 168
-          }
-        }
+        "draggableProps": { "defaultPosition": { "x": 304, "y": 168 } }
       },
       {
         "id": "e67ec05f-f762-40dd-bfd2-385b72069eb3",
@@ -444,12 +434,7 @@
         ],
         "process": {},
         "title": "Magazyn Jęczmienia",
-        "draggableProps": {
-          "defaultPosition": {
-            "x": 310,
-            "y": 350
-          }
-        }
+        "draggableProps": { "defaultPosition": { "x": 310, "y": 350 } }
       },
       {
         "id": "4653f93a-b96c-4ce0-91a8-be440794754d",
@@ -475,12 +460,7 @@
           }
         ],
         "process": {},
-        "draggableProps": {
-          "defaultPosition": {
-            "x": 847,
-            "y": 123
-          }
-        },
+        "draggableProps": { "defaultPosition": { "x": 847, "y": 123 } },
         "title": "Magazyn słodu pszenicznego"
       },
       {
@@ -508,12 +488,7 @@
         ],
         "process": {},
         "title": "Magazyn słodu jasnego",
-        "draggableProps": {
-          "defaultPosition": {
-            "x": 947,
-            "y": 410
-          }
-        }
+        "draggableProps": { "defaultPosition": { "x": 947, "y": 410 } }
       },
       {
         "id": "fe5e29ee-1890-4b7a-89a6-9efd39783b2c",
@@ -521,16 +496,11 @@
         "process": {},
         "inputs": [],
         "outputs": [],
-        "draggableProps": {
-          "defaultPosition": {
-            "x": 19,
-            "y": 229
-          }
-        }
+        "draggableProps": { "defaultPosition": { "x": 19, "y": 229 } }
       },
       {
         "id": "6829d132-0926-4cfc-af52-2dc9eb63ef6d",
-        "process": {},
+        "process": { "setup": "00:02" },
         "inputs": [
           {
             "id": "a0d2364e-3902-4fcd-abff-81711f8115cb",
@@ -553,12 +523,7 @@
         ],
         "title": "Test",
         "type": "process_step",
-        "draggableProps": {
-          "defaultPosition": {
-            "x": 598,
-            "y": 126
-          }
-        }
+        "draggableProps": { "defaultPosition": { "x": 598, "y": 126 } }
       }
     ],
     "connections": {
@@ -603,6 +568,230 @@
         "productId": "9c6beb83-c8f8-4dab-af15-732a4df81cfc",
         "end": "a0d2364e-3902-4fcd-abff-81711f8115cb",
         "endNode": "6829d132-0926-4cfc-af52-2dc9eb63ef6d"
+      }
+    }
+  },
+  {
+    "id": "237f6c9a-06f5-41d3-84d7-f5968cff64818",
+    "name": "Demo process 4",
+    "nodes": [
+      {
+        "id": "0255d54a-e3a8-48d3-b93c-b227e1a98d01",
+        "type": "process_step",
+        "inputs": [
+          {
+            "id": "311b6c75-1b71-41fd-9cd7-7bf2b831e8ee",
+            "connections": 1,
+            "label": "mielonkaIn",
+            "maxConnections": 1,
+            "productId": "b9222d12-bd25-41dd-a6db-13b430d28546",
+            "connectionId": "4487962d-8366-4c75-950e-51477aa7468e"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "533bf688-6fd6-41aa-ba1b-c12723b7dfb6",
+            "connections": 1,
+            "label": "mielonkaOut",
+            "maxConnections": 1,
+            "productId": "f60e37df-4f52-4cb5-83b8-106968fe10db",
+            "connectionId": "20ea585e-0ed8-47c0-9ab3-2e5531875a3e"
+          }
+        ],
+        "process": {
+          "duration": "00:05",
+          "setup": "00:05",
+          "products": {
+            "f60e37df-4f52-4cb5-83b8-106968fe10db": {
+              "requirements": { "b9222d12-bd25-41dd-a6db-13b430d28546": 1 },
+              "amount": 1
+            }
+          }
+        },
+        "draggableProps": { "defaultPosition": { "x": 921, "y": 161 } },
+        "title": "mielonka"
+      },
+      {
+        "id": "659b1efd-2219-4df8-9c0f-241b1fee1837",
+        "type": "buy",
+        "inputs": [
+          {
+            "id": "f3444b6e-cf55-44a5-ad77-57c2098d45ca",
+            "label": "magazynIn",
+            "maxConnections": 1,
+            "connections": 1,
+            "productId": "9c6beb83-c8f8-4dab-af15-732a4df81cfc",
+            "connectionId": "fca9057c-9ca3-47b3-99e8-6d968091efde"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "2dd79cee-8fcd-4899-8d99-f7d490d3f528",
+            "label": "MagazynOut",
+            "maxConnections": 1,
+            "connections": 1,
+            "productId": "9c6beb83-c8f8-4dab-af15-732a4df81cfc",
+            "connectionId": "502664b4-9aac-4128-9eb5-eb432870c927"
+          }
+        ],
+        "process": {},
+        "title": "Magazyn pszenicy",
+        "draggableProps": { "defaultPosition": { "x": 232, "y": 109 } }
+      },
+      {
+        "id": "a6c3cc41-ed1c-491f-9b06-2c4b167f7096",
+        "type": "sell",
+        "inputs": [
+          {
+            "id": "727f83cd-2e97-4628-9a5c-c60b7a594aca",
+            "connections": 1,
+            "label": "slodIn",
+            "maxConnections": 1,
+            "productId": "f60e37df-4f52-4cb5-83b8-106968fe10db",
+            "connectionId": "20ea585e-0ed8-47c0-9ab3-2e5531875a3e"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "6f2affff-96ba-4b35-84fe-8b2f6c52bc4f",
+            "connections": 1,
+            "label": "slodOut",
+            "maxConnections": 1,
+            "productId": "d0baebfb-681d-40da-a136-f92cb94fe249",
+            "connectionId": "ebd12b5e-e0d2-4a27-840e-77c0ef3a5a16"
+          }
+        ],
+        "process": {},
+        "draggableProps": { "defaultPosition": { "x": 1148, "y": 72 } },
+        "title": "Magazyn slodu"
+      },
+      {
+        "id": "3e44c51b-7731-4741-b4d2-83fc79fe13f9",
+        "type": "marketOut",
+        "process": {},
+        "inputs": [],
+        "outputs": [],
+        "draggableProps": { "defaultPosition": { "x": 3, "y": 142 } }
+      },
+      {
+        "id": "1895a786-09ff-432d-9228-b7ec90045e6b",
+        "type": "marketIn",
+        "process": {},
+        "inputs": [],
+        "outputs": [],
+        "draggableProps": { "defaultPosition": { "x": 1403, "y": 60 } }
+      },
+      {
+        "id": "9cea457a-0b06-4bb2-b92f-dd3b061b5a0c",
+        "type": "process_step",
+        "inputs": [
+          {
+            "id": "d7bbcd00-1a87-4da0-acd1-7a54c440f768",
+            "connections": 1,
+            "label": "szuszkaIn",
+            "maxConnections": "1",
+            "productId": "04a910c9-b6d1-4200-be5c-68b944d15163",
+            "connectionId": "eae357cf-311d-4167-817d-dac6e5a64f3f"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "62be5746-dcdf-4071-89e8-1adf78c6d8f3",
+            "connections": 1,
+            "label": "suszkaOut",
+            "maxConnections": 1,
+            "productId": "b9222d12-bd25-41dd-a6db-13b430d28546",
+            "connectionId": "4487962d-8366-4c75-950e-51477aa7468e"
+          }
+        ],
+        "process": {
+          "duration": "00:08",
+          "setup": "05:04",
+          "products": {
+            "b9222d12-bd25-41dd-a6db-13b430d28546": {
+              "requirements": { "04a910c9-b6d1-4200-be5c-68b944d15163": 1 },
+              "amount": 1
+            }
+          }
+        },
+        "draggableProps": { "defaultPosition": { "x": 721, "y": 166 } },
+        "title": "suszka pszenicy"
+      },
+      {
+        "id": "c1ae1621-df6c-4f95-8cf9-051895197875",
+        "type": "process_step",
+        "inputs": [
+          {
+            "id": "1edcd421-422d-4227-af4c-b0ad39fc6b01",
+            "connections": 1,
+            "label": "kielkiIn",
+            "maxConnections": 1,
+            "productId": "9c6beb83-c8f8-4dab-af15-732a4df81cfc",
+            "connectionId": "502664b4-9aac-4128-9eb5-eb432870c927"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "bf0825ec-cd2a-4552-b6fc-b5f8b53e7166",
+            "connections": 1,
+            "label": "kielkiOut",
+            "maxConnections": 1,
+            "productId": "04a910c9-b6d1-4200-be5c-68b944d15163",
+            "connectionId": "eae357cf-311d-4167-817d-dac6e5a64f3f"
+          }
+        ],
+        "process": {
+          "duration": "00:05",
+          "setup": "00:05",
+          "requirements": { "9c6beb83-c8f8-4dab-af15-732a4df81cfc": 1 },
+          "products": { "04a910c9-b6d1-4200-be5c-68b944d15163": 1 }
+        },
+        "draggableProps": { "defaultPosition": { "x": 519, "y": 149 } },
+        "title": "kielki pszenicy"
+      }
+    ],
+    "connections": {
+      "eae357cf-311d-4167-817d-dac6e5a64f3f": {
+        "start": "bf0825ec-cd2a-4552-b6fc-b5f8b53e7166",
+        "startNode": "c1ae1621-df6c-4f95-8cf9-051895197875",
+        "productId": "04a910c9-b6d1-4200-be5c-68b944d15163",
+        "end": "d7bbcd00-1a87-4da0-acd1-7a54c440f768",
+        "endNode": "9cea457a-0b06-4bb2-b92f-dd3b061b5a0c"
+      },
+      "4487962d-8366-4c75-950e-51477aa7468e": {
+        "start": "62be5746-dcdf-4071-89e8-1adf78c6d8f3",
+        "startNode": "9cea457a-0b06-4bb2-b92f-dd3b061b5a0c",
+        "productId": "b9222d12-bd25-41dd-a6db-13b430d28546",
+        "end": "311b6c75-1b71-41fd-9cd7-7bf2b831e8ee",
+        "endNode": "0255d54a-e3a8-48d3-b93c-b227e1a98d01"
+      },
+      "ebd12b5e-e0d2-4a27-840e-77c0ef3a5a16": {
+        "start": "6f2affff-96ba-4b35-84fe-8b2f6c52bc4f",
+        "startNode": "a6c3cc41-ed1c-491f-9b06-2c4b167f7096",
+        "productId": "d0baebfb-681d-40da-a136-f92cb94fe249",
+        "end": "d0baebfb-681d-40da-a136-f92cb94fe249",
+        "endNode": "1895a786-09ff-432d-9228-b7ec90045e6b"
+      },
+      "fca9057c-9ca3-47b3-99e8-6d968091efde": {
+        "start": "9c6beb83-c8f8-4dab-af15-732a4df81cfc",
+        "startNode": "3e44c51b-7731-4741-b4d2-83fc79fe13f9",
+        "productId": "9c6beb83-c8f8-4dab-af15-732a4df81cfc",
+        "end": "f3444b6e-cf55-44a5-ad77-57c2098d45ca",
+        "endNode": "659b1efd-2219-4df8-9c0f-241b1fee1837"
+      },
+      "20ea585e-0ed8-47c0-9ab3-2e5531875a3e": {
+        "start": "533bf688-6fd6-41aa-ba1b-c12723b7dfb6",
+        "startNode": "0255d54a-e3a8-48d3-b93c-b227e1a98d01",
+        "productId": "f60e37df-4f52-4cb5-83b8-106968fe10db",
+        "end": "727f83cd-2e97-4628-9a5c-c60b7a594aca",
+        "endNode": "a6c3cc41-ed1c-491f-9b06-2c4b167f7096"
+      },
+      "502664b4-9aac-4128-9eb5-eb432870c927": {
+        "start": "2dd79cee-8fcd-4899-8d99-f7d490d3f528",
+        "startNode": "659b1efd-2219-4df8-9c0f-241b1fee1837",
+        "productId": "9c6beb83-c8f8-4dab-af15-732a4df81cfc",
+        "end": "1edcd421-422d-4227-af4c-b0ad39fc6b01",
+        "endNode": "c1ae1621-df6c-4f95-8cf9-051895197875"
       }
     }
   }
