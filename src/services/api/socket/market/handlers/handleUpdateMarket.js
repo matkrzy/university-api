@@ -30,7 +30,7 @@ const handleUpdateMarket = (connection, client) => async (data, callback) => {
       },
     );
 
-    const products = await getAllProducts({ isGlobal: true });
+    const products = await getAllProducts({ where: { isGlobal: true } });
 
     connection.emit(MARKET_UPDATE, { data: products });
 
