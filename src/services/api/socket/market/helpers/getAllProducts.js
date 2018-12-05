@@ -2,10 +2,10 @@ const { getMongoRepository } = require('typeorm');
 
 const { Product } = require('../../../../../models/product/product.model');
 
-const getAllProducts = async (where, asObject = true, select = ['id', 'label', 'amount']) => {
+const getAllProducts = async (conditions, asObject = true) => {
   const productsRepository = getMongoRepository(Product);
 
-  const products = await productsRepository.find({ where, select });
+  const products = await productsRepository.find({ ...conditions });
 
   if (asObject) {
     return products.reduce((prev, next) => {

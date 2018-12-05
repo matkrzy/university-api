@@ -1,9 +1,11 @@
 const { getAllProducts } = require('../helpers/getAllProducts');
 
-const handleGetMarket = async (payload, callback) => {
+const handleGetMarket = async (_payload = {}, callback) => {
+  const payload = _payload || {};
+
   const { processId } = payload;
 
-  const products = await getAllProducts({ isGlobal: true });
+  const products = await getAllProducts({ where: { $or: [{ isGlobal: true }, { processId }] } });
 
   callback({ data: products });
 };
