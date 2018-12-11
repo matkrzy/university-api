@@ -603,7 +603,9 @@
           "setup": "00:05",
           "products": {
             "f60e37df-4f52-4cb5-83b8-106968fe10db": {
-              "requirements": { "b9222d12-bd25-41dd-a6db-13b430d28546": 1 },
+              "requirements": {
+                "b9222d12-bd25-41dd-a6db-13b430d28546": 1
+              },
               "amount": 1
             }
           }
