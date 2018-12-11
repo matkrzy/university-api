@@ -1,73 +1,102 @@
 [
   {
-    "id": "9c6beb83-c8f8-4dab-af15-732a4df81cfc",
-    "label": "pszenica",
-    "amount": 9,
-    "isGlobal": true
-  },
-  {
-    "id": "407d4deb-ce38-45f8-9aa5-34adfd75b36f",
-    "label": "jęczmień",
-    "amount": 11,
-    "isGlobal": true
-  },
-  {
-    "id": "d0baebfb-681d-40da-a136-f92cb94fe249",
-    "label": "slod monachijski",
-    "amount": 106,
-    "isGlobal": true
-  },
-  {
-    "id": "7b9ee948-202b-4686-bc29-3637477c929b",
-    "label": "slod jasny",
-    "amount": 0,
-    "isGlobal": true
-  },
-  {
     "id": "f7750b1d-9778-4f7c-85c7-ddab1ce59c60",
-    "label": "slod pszeniczny",
+    "label": "słód",
+    "amount": 100,
+    "isGlobal": true,
+    "processId": null
+  },
+  {
+    "id": "4b18c3e5-eba7-410c-a895-82c8e6b1e43c",
+    "label": "woda",
+    "amount": 100,
+    "isGlobal": true,
+    "processId": null
+  },
+  {
+    "id": "3ea177b6-2c39-4e4c-a249-f690f1b49849",
+    "label": "woda - miękka",
+    "amount": 0,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+  },
+  {
+    "id": "c8f4a736-b9a2-48ae-a189-d00e57446c1c",
+    "label": "woda - twarda",
+    "amount": 0,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+  },
+  {
+    "id": "da3da167-28f7-4712-b82c-4c809ad9e224",
+    "label": "woda - bardzo twarda",
+    "amount": 0,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+  },
+  {
+    "id": "706a1f90-2c02-411d-8c65-612fd5435a5f",
+    "label": "śruta",
+    "amount": 0,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+  },
+  {
+    "id": "47743452-d09f-4257-a84f-e832ffd0dceb",
+    "label": "brzeczka",
+    "amount": 0,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+  },
+  {
+    "id": "3defc8d8-4b8a-49b1-99c4-941a4ba4e80c",
+    "label": "ekstrakt",
+    "amount": 0,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+  },
+  {
+    "id": "87231b49-98b7-49d4-a88c-937a13935146",
+    "label": "piwo niefiltrowane",
+    "amount": 0,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+  },
+  {
+    "id": "20cac2c8-15a4-46c9-a0ed-f208e01c16ec",
+    "label": "piwo przefiltrowane",
+    "amount": 0,
+    "isGlobal": false,
+    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+  },
+  {
+    "id": "96c3cce6-08d1-4e45-af91-05a33eacdbc7",
+    "label": "piwo butelkowane",
     "amount": 0,
     "isGlobal": true
   },
   {
-    "id": "e3e48d22-7078-4e45-bb54-4ed99d18ada1",
-    "label": "slod karmelowy",
+    "id": "9dd409d8-5805-4e84-9912-3e140d71858e",
+    "label": "piwo beczkowane",
     "amount": 0,
     "isGlobal": true
   },
   {
-    "id": "3e31d154-5853-4967-ad55-694e987e6416",
-    "label": "localProductProcess1",
-    "amount": 0,
-    "isGlobal": false,
-    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+    "id": "9935488c-dfa6-4c20-914c-e9418b4c409f",
+    "label": "chmiel",
+    "amount": 100,
+    "isGlobal": true
   },
   {
-    "id": "ed26900f-9a39-462e-b88c-4dd6f661bb60",
-    "label": "testLocalProductProcess2",
-    "amount": 0,
-    "isGlobal": false,
-    "processId": "267f6c9a-06f5-41d4-84d7-d5568cf64818"
+    "id": "231816c3-675e-4870-93c0-65c33234ba24",
+    "label": "butelki",
+    "amount": 100,
+    "isGlobal": true
   },
   {
-    "id": "3347dc72-081d-4a18-b27c-8311085c00a5",
-    "label": "Local product",
-    "amount": 0,
-    "isGlobal": false,
-    "processId": "267f6c9a-06f5-41d4-84d7-d5568cf64818"
-  },
-  {
-    "id": "e3e37b7c-4c61-4a8f-908f-3355dbd2dfec",
-    "label": "local product",
-    "amount": 0,
-    "isGlobal": false,
-    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
-  },
-  {
-    "id": "e3e37b7c-4c61-4a8f-908f-3355dbd2deed",
-    "label": "test form fixtures",
-    "amount": 10,
-    "isGlobal": false,
-    "processId": "267f6c9a-06f5-41d4-84d7-d5968cf64818"
+    "id": "34237593-0aab-45cd-83e8-32fb2fdbe196",
+    "label": "beczki",
+    "amount": 100,
+    "isGlobal": true
   }
 ]
