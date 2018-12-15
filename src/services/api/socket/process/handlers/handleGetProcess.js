@@ -1,8 +1,12 @@
 const { getMongoRepository } = require('typeorm');
 const { Process } = require('../../../../../models/process/process.model');
 
-const handleGetProcess = async (params, callback) => {
+const handleGetProcess = client => async (params, callback) => {
   const { id } = params;
+
+  client.socketData = {
+    processId: id,
+  };
 
   const processesRepository = getMongoRepository(Process);
   const process = await processesRepository.findOne({

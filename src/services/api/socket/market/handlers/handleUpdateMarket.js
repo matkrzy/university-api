@@ -7,7 +7,8 @@ const { getAllProducts } = require('../helpers/getAllProducts');
 
 const handleUpdateMarket = (connection, client) => async (data, callback) => {
   const { productId, amount } = data;
-
+  const { processId } = client.socketData;
+  
   const productsRepository = getMongoRepository(Product);
 
   const product = await productsRepository.findOne({
@@ -30,7 +31,7 @@ const handleUpdateMarket = (connection, client) => async (data, callback) => {
       },
     );
 
-    const products = await getAllProducts({ where: { isGlobal: true } });
+    const products = await getAllProducts({ where: { $or: [{ isGlobal: true }, { processId }] } });
 
     connection.emit(MARKET_UPDATE, { data: products });
 
