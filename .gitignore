@@ -5,3 +5,5 @@ npm-debug.log
 data
 .idea
 .DS_Store
+
+.env
