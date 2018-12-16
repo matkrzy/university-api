@@ -5,7 +5,7 @@ const handleGetMarket = async (_payload = {}, callback) => {
 
   const { processId } = payload;
 
-  const products = await getAllProducts({ where: { $or: [{ isGlobal: true }, { processId }] } });
+  const products = await getAllProducts({ where: { $or: [{ processId: undefined }, { processId }] } });
 
   callback({ data: products });
 };

@@ -14,7 +14,9 @@ const handleGoodsRemove = client => async (payload, callback) => {
   const product = await productsRepository.findOne({ where: { id: productId } });
   const status = await productsRepository.deleteOne({ id: productId });
 
-  const products = await getAllProducts({ where: { $or: [{ isGlobal: true }, { processId: product.processId }] } });
+  const products = await getAllProducts({
+    where: { $or: [{ processId: undefined }, { processId: product.processId }] },
+  });
 
   client.emit(MARKET_UPDATE, { data: products });
 

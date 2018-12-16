@@ -31,7 +31,7 @@ const handleUpdateMarket = (connection, client) => async (data, callback) => {
       },
     );
 
-    const products = await getAllProducts({ where: { $or: [{ isGlobal: true }, { processId }] } });
+    const products = await getAllProducts({ where: { $or: [{ processId: undefined }, { processId }] } });
 
     connection.emit(MARKET_UPDATE, { data: products });
 

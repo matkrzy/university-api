@@ -11,11 +11,11 @@ const handleGoodsAdd = client => async (payload, callback) => {
 
   const { label, processId } = payload;
 
-  const product = new Product(v4(), label, 0, false, processId);
+  const product = new Product(v4(), label, 0, processId);
 
   const status = await productsRepository.insertOne(product);
 
-  const products = await getAllProducts({ where: { $or: [{ isGlobal: true }, { processId }] } });
+  const products = await getAllProducts({ where: { $or: [{ processId: undefined }, { processId }] } });
 
   client.emit(MARKET_UPDATE, { data: products });
 

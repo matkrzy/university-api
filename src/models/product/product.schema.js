@@ -17,10 +17,6 @@ module.exports = new EntitySchema({
     amount: {
       type: 'NumberInt',
     },
-    isGlobal: {
-      type: 'Boolean',
-      select: false,
-    },
     processId: {
       type: 'uuid',
     },
