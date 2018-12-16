@@ -30,15 +30,8 @@
     "uuid": "^3.3.2"
   },
   "scripts": {
-    "start": "nodemon src/index.js --inspect",
-    "serve": "nodemon src/index.js",
+    "start": "pm2 start ecosystem.config.js",
     "dev": "pm2-dev start ecosystem.config.js"
-  },
-  "nodemonConfig": {
-    "port": 9090,
-    "exec": [
-      "babel-node"
-    ]
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
