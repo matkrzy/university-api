@@ -1,0 +1,111 @@
+[
+	{
+		"id" : "1",
+		"label" : "Produkcja wody butelkowanej",
+		"nodes" : [
+			{
+				"id" : "e786ab63-3082-4863-8690-55a551fc9a98",
+				"label" : "Node",
+				"type" : "processStep",
+				"process" : {
+					"products" : {
+						"product-woda-butelkowana" : {
+							"requirements" : [
+								{
+									"productId" : "product-woda",
+									"amount" : "1"
+								},
+								{
+									"productId" : "product-woda",
+									"amount" : "1"
+								}
+							],
+							"amount" : "1"
+						}
+					}
+				},
+				"inputs" : [
+					{
+						"id" : "d659629b-df4a-459e-ac46-7d919205cdd2",
+						"label" : "input",
+						"maxConnections" : 1,
+						"connections" : 0,
+						"productId" : "product-woda",
+						"connectionsId" : [ ]
+					},
+					{
+						"id" : "ec9e8bf8-2469-481d-96e4-1264f419626d",
+						"label" : "input",
+						"maxConnections" : 1,
+						"connections" : 1,
+						"productId" : "product-butelki",
+						"connectionsId" : [
+							"7052766d-8680-4791-9b05-61ec4fcbf31f"
+						]
+					}
+				],
+				"outputs" : [
+					{
+						"id" : "842aa9ea-86c6-445c-84dd-dc2e361d0506",
+						"label" : "output",
+						"maxConnections" : 1,
+						"connections" : 0,
+						"productId" : "product-woda-butelkowana",
+						"connectionsId" : [ ]
+					}
+				],
+				"draggableProps" : {
+					"defaultPosition" : {
+						"x" : 703,
+						"y" : 410
+					}
+				}
+			},
+			{
+				"id" : "57d94257-bcd5-4b90-86b6-f5543f4207cb",
+				"label" : "Magazyn butelek",
+				"type" : "buy",
+				"inputs" : [
+					{
+						"id" : "7dd79b81-48b7-469f-9407-5f5fd3acc215",
+						"label" : "input",
+						"maxConnections" : 1,
+						"connections" : 0,
+						"productId" : "product-butelki",
+						"connectionsId" : [ ]
+					}
+				],
+				"outputs" : [
+					{
+						"id" : "11a17c15-0dcf-4cf4-80cd-b8ded32f40b8",
+						"label" : "output",
+						"maxConnections" : 1,
+						"connections" : 1,
+						"productId" : "product-butelki",
+						"connectionsId" : [
+							"7052766d-8680-4791-9b05-61ec4fcbf31f"
+						]
+					}
+				],
+				"process" : {
+					
+				},
+				"draggableProps" : {
+					"defaultPosition" : {
+						"x" : 376,
+						"y" : 296
+					}
+				}
+			}
+		],
+		"connections" : {
+			"7052766d-8680-4791-9b05-61ec4fcbf31f" : {
+				"start" : "11a17c15-0dcf-4cf4-80cd-b8ded32f40b8",
+				"startNode" : "57d94257-bcd5-4b90-86b6-f5543f4207cb",
+				"productId" : "product-butelki",
+				"end" : "ec9e8bf8-2469-481d-96e4-1264f419626d",
+				"endNode" : "e786ab63-3082-4863-8690-55a551fc9a98"
+			}
+		}
+	}
+]

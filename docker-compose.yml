@@ -6,6 +6,9 @@ services:
     image: mongo
     volumes:
       - ./data:/data/db
+      - ./Makefile:/Makefile
+      - ./.env:/.env
+      - ./export:/export
     ports:
       - '27017:27017'
   mongo-express:

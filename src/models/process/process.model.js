@@ -1,7 +1,7 @@
 class Process {
-  constructor(id, name, nodes, connections) {
+  constructor(id, label, nodes, connections) {
     this.id = id;
-    this.name = name;
+    this.label = label;
     this.nodes = nodes;
     this.connections = connections;
   }
