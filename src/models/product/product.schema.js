@@ -16,9 +16,11 @@ module.exports = new EntitySchema({
     },
     amount: {
       type: 'NumberInt',
+      required: true,
     },
     processId: {
       type: 'uuid',
+      required: true,
     },
   },
 });

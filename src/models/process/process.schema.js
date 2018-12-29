@@ -10,14 +10,17 @@ module.exports = new EntitySchema({
       primary: true,
       type: 'uuid',
     },
-    name: {
+    label: {
       type: 'String',
+      required: true,
     },
     nodes: {
       type: 'Array',
+      required: true,
     },
     connections: {
       type: 'Object',
+      required: true,
     },
   },
 });

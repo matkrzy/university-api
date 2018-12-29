@@ -1,0 +1,203 @@
+[
+  {
+    "id": "1",
+    "label": "Produkcja wody butelkowanej",
+    "nodes": [
+      {
+        "id": "node-1",
+        "label": "Rynek",
+        "type": "marketOut"
+      },
+      {
+        "id": "node-2",
+        "label": "Rynek",
+        "type": "marketIn"
+      },
+      {
+        "id": "node-3",
+        "label": "Magazyn wody",
+        "type": "buy",
+        "inputs": [
+          {
+            "label": "woda",
+            "id": "magazyn-wody-wejscie",
+            "productId": "product-woda"
+          }
+        ],
+        "outputs": [
+          {
+            "label": "woda",
+            "id": "magazyn-wody-wyjscie",
+            "productId": "product-woda"
+          }
+        ]
+      },
+      {
+        "id": "node-7",
+        "label": "Magazyn butelek",
+        "type": "buy",
+        "inputs": [
+          {
+            "label": "butelki",
+            "id": "magazyn-butelek-wejscie",
+            "productId": "product-butelki"
+          }
+        ],
+        "outputs": [
+          {
+            "label": "butelki",
+            "id": "magazyn-butelek-wyjscie",
+            "productId": "product-butelki"
+          }
+        ]
+      },
+      {
+        "id": "node-4",
+        "label": "Dekarbonizacja wody",
+        "type": "processStep",
+        "inputs": [
+          {
+            "label": "woda",
+            "id": "woda-dekarb-wejscie",
+            "productId": "product-woda"
+          }
+        ],
+        "outputs": [
+          {
+            "label": "woda dekarbonizowana",
+            "id": "woda-dekarb-wyjscie",
+            "productId": "product-woda-dekar"
+          }
+        ],
+        "process": {
+          "duration": "00:04",
+          "setup": "00:02",
+          "products": {
+            "product-woda-dekar": {
+              "amount": "1",
+              "requirements": [
+                {
+                  "productId": "product-woda",
+                  "amount": "2"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "node-5",
+        "label": "Butelkowanie wody",
+        "type": "processStep",
+        "inputs": [
+          {
+            "label": "woda dekarbonizowana",
+            "id": "butelkowanie-woda-wejscie",
+            "productId": "product-woda-dekar"
+          },
+          {
+            "label": "butelki",
+            "id": "butelkowanie-butelki-wejscie",
+            "productId": "product-butelki"
+          }
+        ],
+        "outputs": [
+          {
+            "label": "woda butelkowana",
+            "id": "butelkowanie-wyjscie",
+            "productId": "product-woda-butelkowana"
+          }
+        ],
+        "process": {
+          "duration": "00:02",
+          "setup": "00:02",
+          "products": {
+            "product-woda-butelkowana": {
+              "amount": "1",
+              "requirements": [
+                {
+                  "productId": "product-woda-dekar",
+                  "amount": "1"
+                },
+                {
+                  "productId": "product-butelki",
+                  "amount": "1"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "node-6",
+        "label": "Magazyn wody butelkowanej",
+        "type": "sell",
+        "inputs": [
+          {
+            "label": "woda butelkowana",
+            "id": "magazyn-wody-butel-wejscie",
+            "productId": "product-woda-butelkowana"
+          }
+        ],
+        "outputs": [
+          {
+            "label": "woda butelkowana",
+            "id": "magazyn-wody-butel-wyjscie",
+            "productId": "product-woda-butelkowana"
+          }
+        ]
+      }
+    ],
+    "connections": {
+      "connection-1": {
+        "start": "product-woda",
+        "end": "magazyn-wody-wejscie",
+        "startNode": "node-1",
+        "endNode": "node-3",
+        "productId": "product-woda"
+      },
+      "connection-2": {
+        "start": "magazyn-wody-wyjscie",
+        "end": "woda-dekarb-wejscie",
+        "startNode": "node-3",
+        "endNode": "node-4",
+        "productId": "product-woda"
+      },
+      "connection-3": {
+        "start": "woda-dekarb-wyjscie",
+        "end": "butelkowanie-woda-wejscie",
+        "startNode": "node-4",
+        "endNode": "node-5",
+        "productId": "product-woda-dekar"
+      },
+      "connection-4": {
+        "start": "butelkowanie-wyjscie",
+        "end": "magazyn-wody-butel-wejscie",
+        "startNode": "node-5",
+        "endNode": "node-6",
+        "productId": "product-woda-butelkowana"
+      },
+      "connection-5": {
+        "start": "magazyn-wody-butel-wyjscie",
+        "end": "product-woda-butelkowana",
+        "startNode": "node-6",
+        "endNode": "node-2",
+        "productId": "product-woda-butelkowana"
+      },
+      "connection-6": {
+        "start": "product-butelki",
+        "end": "magazyn-butelek-wejscie",
+        "startNode": "node-1",
+        "endNode": "node-7",
+        "productId": "product-butelki"
+      },
+      "connection-7": {
+        "start": "magazyn-butelek-wyjscie",
+        "end": "butelkowanie-butelki-wejscie",
+        "startNode": "node-7",
+        "endNode": "node-5",
+        "productId": "product-butelki"
+      }
+    }
+  }
+]

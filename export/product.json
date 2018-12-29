@@ -1,0 +1,26 @@
+[
+	{
+		"id" : "product-woda",
+		"label" : "woda",
+		"amount" : 100,
+		"processId" : null
+	},
+	{
+		"id" : "product-butelki",
+		"label" : "butelki",
+		"amount" : 100,
+		"processId" : null
+	},
+	{
+		"id" : "product-woda-butelkowana",
+		"label" : "woda butelkowana",
+		"amount" : 0,
+		"processId" : null
+	},
+	{
+		"id" : "product-woda-dekar",
+		"label" : "woda dekarbonizowana",
+		"amount" : 0,
+		"processId" : "1"
+	}
+]
